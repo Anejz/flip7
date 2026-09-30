@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174e40">
+  <title>Flip 7 — One more?</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell" id="app">
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="Flip 7 home">FLIP<span>7</span></a>
+      <nav aria-label="Table controls">
+        <button class="text-button" id="btn-sound" aria-pressed="false" aria-label="Turn sound on">Sound off</button>
+        <button class="text-button" id="btn-history">Scores</button>
+        <button class="text-button" id="btn-leaders">Leaders</button>
+        <button class="text-button" id="btn-rules">How to play <span>↗</span></button>
+        <button class="text-button" id="btn-new">New game</button>
+      </nav>
+    </header>
+    <div id="review-banner" hidden>REVIEW SCENARIO · <span id="review-name"></span> · NOT A LIVE GAME <a href="./">Leave review ↗</a></div>
+    <main id="game-table" class="table">
+      <div class="table-topline"><span id="round-label">YOUR TABLE</span><span id="deck-count">94 cards</span><span>FIRST TO <b>200</b></span></div>
+      <section class="center-stage" aria-label="Current turn">
+        <div class="turn-control">
+          <h1 id="turn-title">One more?</h1>
+          <p class="turn-sub sr-only" id="turn-sub"></p>
+          <div id="controls" class="controls"></div>
+        </div>
+      </section>
+      <section id="players" class="players" aria-label="All three hands"></section>
+      <footer class="table-footer"><p id="latest-event" role="status" aria-live="polite"></p><span id="save-status"></span></footer>
+    </main>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="celebration" class="celebration" aria-hidden="true"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
